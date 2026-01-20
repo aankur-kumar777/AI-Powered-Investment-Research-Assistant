@@ -1,0 +1,17 @@
+# config/defaults.yaml
+# Local / dev configuration. Override values with environment variables in production.
+openai:
+  api_key: "${OPENAI_API_KEY: }"
+
+chroma:
+  persist_dir: "./chroma_db"
+  collection: "research_docs"
+
+database:
+  url: "${DATABASE_URL:postgresql://postgres:password@postgres:5432/ai_invest}"
+
+redis:
+  url: "${REDIS_URL:redis://localhost:6379}"
+
+mlflow:
+  tracking_uri: "${MLFLOW_TRACKING_URI:}"
